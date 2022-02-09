@@ -1,2 +1,2 @@
-# JerseyZone
-TSA Coding Challenge 2022 Entry
+# JerseyZone repo
+WEB VER. DEPLOYED ON https://jersey-zone.vercel.app/

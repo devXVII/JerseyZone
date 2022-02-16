@@ -12,3 +12,7 @@
   -webkit-user-select: none;
   -khtml-user-select: none;
 }
+
+.404stateheader {
+  text-align: center;
+}

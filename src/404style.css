@@ -4,10 +4,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.nav {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%) !important;
-}
-
 .unselectable { 
   -moz-user-select: none; 
   -ms-user-select: none;

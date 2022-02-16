@@ -12,5 +12,5 @@
   -khtml-user-select: none; 
 }
 .404stateheader, .404statemid, .404statemidagain {
-  text-align: center;
+  color: blue;
 }

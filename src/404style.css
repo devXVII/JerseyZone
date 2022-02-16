@@ -3,6 +3,11 @@
   text-indent: 10px;
   font-family: 'Montserrat', sans-serif;
 }
+
+.body {
+  color: blue;
+}
+
 .unselectable { 
   -moz-user-select: none; 
   -ms-user-select: none;
@@ -10,8 +15,4 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
-}
-
-.body {
-  color: blue;
 }

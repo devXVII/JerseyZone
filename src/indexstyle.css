@@ -15,3 +15,11 @@
 .bluec {
   color: #1e88e5;
 }
+
+.grow {
+  transition: transform .15s;
+}
+
+.grow:hover {
+  transform: scale(1.2);
+}

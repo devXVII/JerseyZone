@@ -11,8 +11,8 @@ window.onload = async () => {
   .then(data => locations = data)
   .then(() => alert(JSON.stringify(locations)));
    fetch('/static/locationTemplate.html')
-  .then(res => res.json())
+  .then(res => res.text())
   .then(data => template = data)
-  .then(() => alert(JSON.stringify(template)))
+  .then(() => alert(template))
 };
 function searchLocation(value) {}

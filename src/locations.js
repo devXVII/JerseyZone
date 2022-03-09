@@ -11,10 +11,10 @@ function loadLocations() {
 }
 
 async function loader() {
-  fetch("/src/static/locations.json").then((data) => {
+  fetch("/static/locations.json").then((data) => {
     locations = data;
   });
-  fetch("./static/locationTemplate.html")
+  fetch("/static/locationTemplate.html")
     .then((data) => {
       data.text();
     })

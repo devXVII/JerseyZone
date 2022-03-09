@@ -15,10 +15,10 @@ function loadLocations() {
 }
 
 async function loader() {
-  fetch("/static/locations.json").then((data) => {
+  await fetch("/static/locations.json").then((data) => {
     locations = data;
   });
-  fetch("/static/locationTemplate.html")
+  await fetch("/static/locationTemplate.html")
     .then((data) => {
       data.text();
     })

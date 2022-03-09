@@ -12,7 +12,7 @@ window.onload = async () => {
   .then(() => alert(locations));
    fetch('/static/locationTemplate.html')
   .then(res => res.json())
-  .then(data => templete = data)
-  .then(() => alert(templete))
+  .then(data => template = data)
+  .then(() => alert(template))
 };
 function searchLocation(value) {}

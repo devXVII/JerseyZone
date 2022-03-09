@@ -6,8 +6,7 @@ window.onerror = function(msg, url, linenumber) {
 
 var template;
 window.onload = async () => {
-  await loader();
-  loadLocations();
+  await loader().then(() => {loadLocations()});
 };
 
 function loadLocations() {

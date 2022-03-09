@@ -9,10 +9,10 @@ window.onload = async () => {
   fetch('/static/locations.json')
   .then(res => res.json())
   .then(data => locations = data)
-  .then(() => alert(locations));
+  .then(() => alert(JSON.stringify(locations)));
    fetch('/static/locationTemplate.html')
   .then(res => res.json())
   .then(data => template = data)
-  .then(() => alert(template))
+  .then(() => alert(JSON.stringify(template)))
 };
 function searchLocation(value) {}

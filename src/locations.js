@@ -3,7 +3,7 @@ window.onerror = function(msg, url, linenumber) {
     alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
     return true;
 }
-throw "HELP ME!!!"
+
 var template;
 window.onload = async () => {
   await loader();
@@ -11,7 +11,7 @@ window.onload = async () => {
 };
 
 function loadLocations() {
-  console.log(locations.json());
+  alert(locations.json());
 }
 
 async function loader() {

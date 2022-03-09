@@ -6,23 +6,13 @@ window.onerror = function(msg, url, linenumber) {
 
 var template;
 window.onload = async () => {
-  await loader().then(() => {loadLocations()});
+  fetch('/static/locations.json')
+  .then(res => res.json())
+  .then(data => locations = data)
+  .then(() => alert(locations));
+   fetch('/static/locationTemplate.html')
+  .then(res => res.json())
+  .then(data => templete = data)
+  .then(() => alert(templete))
 };
-
-async function loadLocations() {
-  alert(locations);
-}
-
-async function loader() {
-  await fetch("/static/locations.json").then((data) => {
-    alert(data.json());
-  });
-  await fetch("/static/locationTemplate.html")
-    .then((data) => {
-      data.text();
-    })
-    .then((html) => {
-      template = html;
-    });
-}
 function searchLocation(value) {}

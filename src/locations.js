@@ -9,13 +9,13 @@ window.onload = async () => {
   await loader().then(() => {loadLocations()});
 };
 
-function loadLocations() {
+async function loadLocations() {
   alert(locations);
 }
 
 async function loader() {
   await fetch("/static/locations.json").then((data) => {
-    locations = data.json();
+    alert(data.json());
   });
   await fetch("/static/locationTemplate.html")
     .then((data) => {

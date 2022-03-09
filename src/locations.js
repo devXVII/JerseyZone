@@ -11,12 +11,12 @@ window.onload = async () => {
 };
 
 function loadLocations() {
-  alert(locations.json());
+  alert(locations);
 }
 
 async function loader() {
   await fetch("/static/locations.json").then((data) => {
-    locations = data;
+    locations = data.json();
   });
   await fetch("/static/locationTemplate.html")
     .then((data) => {

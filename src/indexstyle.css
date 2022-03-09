@@ -58,7 +58,7 @@ body {
   background-color: #a8bbbf;
 }
 
-nobluehyperlink {
+.nobluehyperlink {
   color: black;
   text-decoration: none;
 }

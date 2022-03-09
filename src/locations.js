@@ -14,5 +14,16 @@ window.onload = async () => {
   .then(res => res.text())
   .then(data => template = data)
   .then(() => alert(template))
+   table = document.getElementById("locationList")
+   locations.forEach(place => {
+    row = table.insertRow(-1);
+    name = row.insertCell(0);
+    pic = row.insertCell(1);
+    desc = row.insertCell(2);
+    links = row.insertCell(3);
+    name = place.name;
+    pic = `<img src="${place.img}"`
+    desc = place.description;
+   });
 };
 function searchLocation(value) {}

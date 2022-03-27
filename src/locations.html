@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./locations.js"></script>
   </head>
 
@@ -39,15 +40,13 @@
     <h3 class="brand-logo bluec" align="left">Locations</h3>
     <div class="container">
       <input id="locationSearch" type="text" onchange="searchLocation" />
-      <table id="locationList highlight striped">
+      <table id="locationList" class="highlight striped">
         <thead>
           <tr>
-            <th>Location Name</th>
-            <th>Pictures</th>
-            <th>Links</th>
-            <th>Description</th>
+            <th id="locationName">Location</th>
           </tr>
         </thead>
+        <tbody></tbody>
       </table>
     </div>
   </body>

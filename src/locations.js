@@ -1,58 +1,42 @@
 var locations;
+window.addEventListener("DOMContentLoaded", async () =>
+{
+  fetch("https://api.npoint.io/eb65d929bf9c35412877").then((res) => res.json()).then((data) => (locations = data)).then(() => createTable(locations));
 
-window.addEventListener("DOMContentLoaded", async () => {
-  fetch("https://api.npoint.io/f245921ce54a089858f1")
-    .then((res) => res.json())
-    .then((data) => (locations = data))
-    .then(() => createTable(locations));
-
-  function createTable(locations) {
-    table = $("#locationList tbody").get()[0];
-    Object.values(locations).forEach((place) => {
-      row = table.insertRow(-1);
-      row.insertCell(0).appendChild(document.createTextNode(place.name));
-      $(row).children().addClass("locationNames");
-      placeInfo = row.insertCell(1);
-      placeInfo.colSpan = "4";
-      placeInfo.appendChild(getPlaceInfo(place));
+  function createTable(locations)
+  {
+    list = $("#locationList").get()[0];
+    Object.values(locations).forEach((place) =>
+    {
+      locationBullet = document.createElement("li")
+      div = document.createElement('div');
+      div.innerHTML = `<a class="tooltip" href="/src/locations/${place.shortName}.html">${place.name}<span class="tooltiptext ">${place.name}</span></a>`
+      place = document.createDocumentFragment()
+      while (div.firstChild) place.appendChild(div.firstChild);;
+      locationBullet.appendChild(place)
+      list.appendChild(locationBullet)
     });
   }
+})
 
-  function getPlaceInfo(place) {
-    placeDesc = document.createElement("div");
-    placeDesc.innerHTML = `<p style="display: block">${place.description}`;
-    return document.createDocumentFragment().appendChild(placeDesc);
-  }
-
-  $(function () {
-    $("td[colspan=4]").find("div").hide();
-    $("#locationList").click(function (event) {
-      event.stopPropagation();
-      var $target = $(event.target);
-      if ($target.closest("td").attr("colspan") > 1) {
-        $target.slideUp();
-      } else {
-        $target.closest("td").next().find("div").slideToggle();
-      }
-    });
-  });
-});
-
-function filterTable() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("locationSearch");
+function filterList()
+{
+  var input, filter, ul, li, a, i, txtValue;
+  input = $(".locationSearch").get()[0];
   filter = input.value.toUpperCase();
-  table = document.getElementById("locationList");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+  ul = $("#locationList").get()[0];
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++)
+  {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1)
+    {
+      li[i].style.display = "";
+    }
+    else
+    {
+      li[i].style.display = "none";
     }
   }
 }

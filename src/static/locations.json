@@ -1,47 +1,13 @@
-{
-  "0":{
-    "pic":"https://www.metlifestadium.com/images/default-source/hospitality/event-spaces/stadium-field/ml2_1850.jpg?sfvrsn=f2e99b78_1",
-    "name":"MetLife Stadium",
-    "links":{
-      "link":"https://www.metlifestadium.com/",
-      "name":"MetLife Stadium Official Site"
-    },
-    "description":"MetLife Stadium is a multi-purpose stadium located in East Rutherford, New Jersey, just west of New York City, in the Meadowlands Sports Complex. It is the home of the National Football League's New York Giants and New York Jets (NFL). It was the most costly stadium built in the United States at the time of its construction, costing an estimated $1.6 billion."
-  },
-  "1":{
-    "pic":"https://cdn4.picryl.com/photo/2017/01/01/beaches-on-the-new-jersey-shore-in-cape-may-new-jersey-261774-1024.jpg",
-    "name":"Jersey Shore",
-    "links":{
-      "link":"https://shorestore.com/",
-      "name":"Official Store of the Jersey Shore"
-    },
-    "description":"The Jersey Shore (often referred to as “The Shore” by the locals) is a coastal area of New Jersey. It is a renowned tourist destination known for its many boardwalks with arcades, amusement parks, and water parks with hundreds of rides and attractions. The Jersey Shore has the largest density of oceanfront boardwalks in the United States."
-  },
-  "2":{
-    "pic":"https://live.staticflickr.com/5454/9321055523_2577486d86_b.jpg",
-    "name":"Six Flags: Great Adventure",
-    "links":{
-      "link":"https://www.sixflags.com/greatadventure",
-      "name":"Great Adventure Website"
-    },
-    "description":"Six Flags: Great Adventure is an amusement park complex in Jackson, New Jersey. The park, which is owned and operated by Six Flags, is located between New York City and Philadelphia, and is well-known for the water park ride Hurricane Harbor. Under the leadership of Warner LeRoy, it originally opened to the public in 1974 as Great Adventure, and the park was purchased by Six Flags in 1977."
-  },
-  "3":{
-    "pic":"https://live.staticflickr.com/2928/14351864340_57086662b9_b.jpg",
-    "name":"Jenkinson's Boardwalk",
-    "links":{
-      "link":"https://jenkinsons.com/",
-      "name":"Jenkinson's Boardwalk Site"
-    },
-    "description":"Jenkinson’s Boardwalk is a beach and boardwalk complex in Ocean County on Point Pleasant Beach. The boardwalk features various attractions such as amusement rides, restaurants, and even its own aquarium. It was founded in 1928 by Charles Jenkinson, originally called Jenkinson’s Pavilion."
-  },
-  "4":{
-    "pic":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Turtle_Back_Zoo_Entrance_June_2019-02.jpg/1280px-Turtle_Back_Zoo_Entrance_June_2019-02.jpg",
-    "name":"Turtle Back Zoo",
-    "links":{
-      "link":"http://www.turtlebackzoo.com/",
-      "name":"Turtle Back Zoo official site"
-    },
-    "description":"Turtle Back Zoo is part of the South Mountain Recreation Complex in West Orange, New Jersey. It is part of the Essex County Park System, which is the oldest county park system in the United States, and is located on 20 acres of the South Mountain Reservation. The zoo, which opened in 1963 as a showcase for creatures native to the New York metropolitan region, now has species from nearly every continent. It has held over 1400 animals."
+[
+  {
+    "name": "MetLife Stadium",
+    "pic": "",
+    "description": "MetLife Stadium is a multi-purpose stadium located in East Rutherford, New Jersey, just west of New York City, in the Meadowlands Sports Complex. It is the home of the National Football League's New York Giants and New York Jets (NFL). It was the most costly stadium built in the United States at the time of its construction, costing an estimated $1.6 billion.",
+    "links": [
+      {
+        "name": "MetLife Stadium Official Site",
+        "link": "https://www.metlifestadium.com/"
+      }
+    ]
   }
-}
+]

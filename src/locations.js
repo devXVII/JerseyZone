@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", async () =>
     {
       locationBullet = document.createElement("li")
       div = document.createElement('div');
-      div.innerHTML = `<a class="tooltip" href="/src/locations/${place.shortName}.html">${place.name}<span class="tooltiptext ">${place.name}</span></a>`
+      div.innerHTML = `<a class="tooltip" href="/locations/${place.shortName}.html">${place.name}<span class="tooltiptext ">${place.name}</span></a>`
       place = document.createDocumentFragment()
       while (div.firstChild) place.appendChild(div.firstChild);;
       locationBullet.appendChild(place)

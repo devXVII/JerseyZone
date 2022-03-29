@@ -3,6 +3,10 @@
   text-indent: 10px;
   font-family: "Montserrat", sans-serif;
 }
+
+body {
+  overflow: overlay;
+}
 .unselectable {
   -moz-user-select: none;
   -ms-user-select: none;
@@ -36,22 +40,21 @@
   min-width: 100% !important;
 }
 
- ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 17.5px;
 }
-
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   opacity: 0;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #d6dee1;
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
 
@@ -59,13 +62,6 @@
   color: black;
   text-decoration: none;
 }
-
-thead tr th {
-  width: 20%;
-  border-bottom: 2px solid black;
-  text-align: center;
-}
-
 
 /* label color */
 
@@ -101,10 +97,10 @@ ul
 }
 li {
   margin-left: 25px;
-  list-style-image: url("/static/jersey.svg");
+  list-style-image: url("/src/static/jersey.svg");
 }
 
-li a {
+li a:not(.navLink) {
   position: relative;
   top: -10px
 }

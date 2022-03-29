@@ -180,6 +180,7 @@ grid-row-gap: 0px;
   background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/8c/39/99/metlife-stadium.jpg?w=1200&h=-1&s=1");
   background-size: cover;
    background-position: center;
+  border: 1px solid;
 }
 
 #locationDetails {

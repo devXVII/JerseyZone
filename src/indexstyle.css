@@ -95,12 +95,16 @@ thead tr th {
   color: # !important;
 }
 
-#locationList li {
+ul
+{
+  display: block;
+}
+li {
   margin-left: 25px;
-  list-style-image: url("/static/jersey.svg");
+  list-style-image: url("/src/static/jersey.svg");
 }
 
-#locationList li a {
+li a {
   position: relative;
   top: -10px
 }
@@ -167,17 +171,16 @@ a:hover {
 
 #pageContainer {
   display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: 1fr repeat(2, 0.5fr);
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 0.5fr repeat(2, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
   width: 100vw;
   height: calc(100vh - 64px);
-  border: 1px solid;
 }
 
 #locationImage {
-  grid-area: 1 / 1 / 2 / 2;
+   grid-area: 1 / 1 / 3 / 2;
   background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/8c/39/99/metlife-stadium.jpg?w=1200&h=-1&s=1");
   background-size: cover;
    background-position: center;
@@ -185,13 +188,27 @@ grid-row-gap: 0px;
 }
 
 #locationDetails {
-  grid-area: 3 / 1 / 4 / 3;
+  grid-area: 1 / 2 / 2 / 3; 
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#locationDetails ul
+{
+  margin-top: 15px;
 }
 
 #locationDesc {
-  grid-area: 2 / 1 / 3 / 3;
+  grid-area: 2 / 2 / 3 / 3;
+  padding: 10px;
+  text-align: justify
 }
 
 #locationReviews {
-  grid-area: 1 / 2 / 2 / 3;
+ grid-area: 3 / 1 / 4 / 3;
+}
+
+img, span
+{
+  vertical-align: center;
 }

@@ -101,7 +101,7 @@ ul
 }
 li {
   margin-left: 25px;
-  list-style-image: url("/src/static/jersey.svg");
+  list-style-image: url("/static/jersey.svg");
 }
 
 li a {

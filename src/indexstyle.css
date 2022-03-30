@@ -183,10 +183,13 @@ grid-row-gap: 0px;
   
 }
 
+.sixflags {
+  background-image: url("https://live.staticflickr.com/5454/9321055523_2577486d86_b.jpg") !important;
+}
+
 #locationDetails {
   grid-area: 1 / 2 / 2 / 3; 
   padding-left: 20px;
-  padding-top: 10px;
 }
 
 #locationDetails ul

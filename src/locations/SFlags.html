@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JerseyZone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      />
+    <link rel="stylesheet" href="../indexstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+      />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+       <script>
+      window.onload = () =>{
+      document.getElementsByClassName('addReview')[0].onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.code || e.key;
+    if (keyCode == 'Enter'){
+      input = $(".addReview").val();
+          $(`<tr>
+      <td><img src="https://avatars.dicebear.com/api/adventurer/${Math.floor(Math.random() * 100)}.svg?size=50"/></td>
+      <td><b>@guest</b></td>
+      <td>${input}</td>
+      </tr>`).prependTo("#reviews");
+       $(".addReview").val("")
+      return false;
+    }
+      }}
+    </script>
+  </head>
+  <body>
+    <nav class="titlenav unselectable">
+      <div class="nav-wrapper blue darken-1">
+        <a href="/" class="brand-logo">JerseyZone</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="src/index.html" class="navLink">
+            <i class="material-icons left">home</i>
+            Home
+            </a>
+          </li>
+          <li>
+            <a href="src/locations.html" class="navLink">
+            <i class="material-icons left">explore</i>
+            Locations
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="pageContainer">
+      <div id="locationImage" class="sixflags"> </div>
+      <div id="locationDetails">
+        <h4 class = "brand-logo bluec">Six Flags Great Adventure</h4>
+        <h5>Useful Links</h5>
+        <div id="locationLinks">
+          <ul>
+            <li>
+              <a href="https://www.sixflags.com/greatadventure" rel="external" target="_blank">Six Flags Great Adventure Official Site</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="locationDesc">
+        <p>Six Flags Great Adventure is an amusement park complex in Jackson, New Jersey. The park, which is owned and operated by Six Flags, is located between New York City and Philadelphia, and is well-known for the water park ride Hurricane Harbor. Under the leadership of Warner LeRoy, it originally opened to the public in 1974 as Great Adventure, and the park was purchased by Six Flags in 1977.</p>
+      </div>
+      <div id="locationReviews" style="margin-top: 10px">
+                <div class="input-field container">
+          <i class="material-icons prefix">rate_review</i>
+          <input id="icon_prefix" class="locationSearch addReview" type="text"/>
+          <label for="icon_prefix">Add a review for Six Flags Great Adventure</label>
+        </div>
+        <table id="reviews">
+          <tr>
+            <td><img src="https://avatars.dicebear.com/api/micah/ajsdffdf.svg?size=50"/></td><td><span><b>@FreshestCutEver</b></span></td>
+            <td>SO MUCH FUN</td>
+          </tr>
+          <tr>
+            <td><img src="https://avatars.dicebear.com/api/micah/jffgmaj1349803481908491elloss.svg?size=50"/></td><td><span><b>@millenialmum999</b></span></td>
+            <td>I like it! My kids enjoyed it</td>
+          </tr>
+          <tr>
+            <td><img src="https://avatars.dicebear.com/api/pixel-art/qnasdfjofdisajato.svg?size=50"/></td><td><span><b>@redsurfin</b></span></td>
+            <td>so good...</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

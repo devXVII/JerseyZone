@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html>  
   <head>
     <title>JerseyZone</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-      />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="../indexstyle.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-      />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      window.onload = () =>{
+      document.getElementsByClassName('addReview')[0].onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.code || e.key;
+    if (keyCode == 'Enter'){
+      input = $(".addReview").val();
+          $(`<tr>
+      <td><img src="https://avatars.dicebear.com/api/adventurer/${Math.floor(Math.random() * 100)}.svg?size=50"/></td>
+      <td><b>@guest</b></td>
+      <td>${input}</td>
+      </tr>`).prependTo("#reviews");
+       $(".addReview").val("")
+      return false;
+    }
+      }}
+    </script>
   </head>
   <body>
     <nav class="titlenav unselectable">
@@ -21,14 +32,14 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <a href="./index.html" class="navLink">
-            <i class="material-icons left">home</i>
-            Home
+              <i class="material-icons left">home</i>
+              Home
             </a>
           </li>
           <li>
             <a href="./locations.html" class="navLink">
-            <i class="material-icons left">explore</i>
-            Locations
+              <i class="material-icons left">explore</i>
+              Locations
             </a>
           </li>
         </ul>
@@ -37,13 +48,7 @@
     <div id="pageContainer">
       <div id="locationImage"></div>
       <div id="locationDetails">
-        <h4>MetLife Stadium</h4>
-        <i class="material-icons left small">star</i>
-        <i class="material-icons left small">star</i>
-        <i class="material-icons left small">star</i>
-        <i class="material-icons left small">star</i>
-        <i class="material-icons left small">star_half</i>
-        <br/>
+        <h4 class="brand-logo bluec">MetLife Stadium</h4>
         <h5>Useful Links</h5>
         <div id="locationLinks">
           <ul>
@@ -54,13 +59,38 @@
         </div>
       </div>
       <div id="locationDesc">
-        <p>MetLife Stadium is a multi-purpose stadium located in East Rutherford, New Jersey, just west of New York City, in the Meadowlands Sports Complex. It is the home of the National Football League's New York Giants and New York Jets (NFL). It was the most costly stadium built in the United States at the time of its construction, costing an estimated $1.6 billion.</p>
+        <p>
+          MetLife Stadium is a multi-purpose stadium located in East Rutherford, New Jersey, just west of New York City, in the Meadowlands Sports Complex. It is the home of the National Football League's New York Giants and New York Jets
+          (NFL). It was the most costly stadium built in the United States at the time of its construction, costing an estimated $1.6 billion.
+        </p>
       </div>
-      <div id="locationReviews">
-        <table>
+      <div id="locationReviews" style="margin-top: 10px;">
+        <div class="input-field container">
+          <i class="material-icons prefix">rate_review</i>
+          <input id="icon_prefix" class="locationSearch addReview" type="text"/>
+          <label for="icon_prefix">Add a review for MetLife Stadium</label>
+        </div>
+        <table id="reviews">
           <tr>
-            <td><img src="https://avatars.dicebear.com/api/pixel-art/.svg?size=50"/></td><td><span>@youngb39758</span></td>
+            <td><img src="https://avatars.dicebear.com/api/pixel-art/ajsf.svg?size=50" /></td>
+            <td>
+              <span><b>@youngb39758</b></span>
+            </td>
             <td>good stadium, clean bathrooms is a bonus</td>
+          </tr>
+          <tr>
+            <td><img src="https://avatars.dicebear.com/api/micah/j1349803481908491elloss.svg?size=50" /></td>
+            <td>
+              <span><b>@kris_cat390</b></span>
+            </td>
+            <td>not bad!</td>
+          </tr>
+          <tr>
+            <td><img src="https://avatars.dicebear.com/api/adventurer/qato.svg?size=50" /></td>
+            <td>
+              <span><b>@TheGlassPigeon</b></span>
+            </td>
+            <td>i actually like it hehe</td>
           </tr>
         </table>
       </div>

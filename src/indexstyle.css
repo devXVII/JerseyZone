@@ -196,7 +196,7 @@ grid-row-gap: 0px;
 
 #locationDesc {
   grid-area: 2 / 2 / 3 / 3;
-  padding: 20px;
+  padding: 15px;
   text-align: justify
 }
 
